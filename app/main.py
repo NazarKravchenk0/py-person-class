@@ -9,7 +9,10 @@ class Person:
 
 def create_person_list(people: list[dict]) -> list[Person]:
     # create Person instances
-    persons = [Person(person_dict["name"], person_dict["age"]) for person_dict in people]
+    persons = [
+        Person(person_dict["name"], person_dict["age"])
+        for person_dict in people
+    ]
 
     # link wife/husband attributes
     for person_dict in people:
